@@ -1,0 +1,372 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>test</title>
+    </head>
+    <style>
+    body{
+        font-family: sans-serif;
+        background-color: #332B31;
+        color: white;
+    }
+    h1{
+        text-align: center;
+        font-size: 50px;
+        color: #B33E9B;
+    }
+    div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    div>article{
+        background-color: #B33E9B;
+    }
+
+    article{
+        background-color: #804674;
+        border-radius: 15px;
+        padding: 1em;
+        margin: 20px;
+    }
+    header>p{
+        text-align: center;
+    }
+    footer{
+        display: flex;
+        justify-content: space-around;
+        color: #804674;
+        border-radius: 15px;
+        padding: 1em;
+        margin: 20px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    </style>
+    <body>
+        <header>
+            <h1 class="test" >src1.c</h1>
+                    <p>   code sources qui comprend le code de la recherche sequentielle  et de la recherche dichotomique </p>
+        </header>
+        <main>
+            <article>
+                <h2>DEFINE</h2>
+                        <p>N 10  taille max des tableaux utiliser</p>
+                    <p>TEST -1  nombre pour effectuer les test dans les recherches</p>
+                    <p>leTablo = {23, 54, 65, 12, 43, 78, 68, 93, 18, 31}  un tableau de valeur</p>
+                    <p>leTabloTrie = {13, 24, 35, 42, 53, 68, 77, 83, 88, 91}  un tableau de valeur triee</p>
+                </article>
+            <article>
+                <h2>STRUCTURE</h2>
+                <div>
+                        <article>
+                        <h3>structure_test: Sturcture d'un test</h3>
+                        <pre>
+
+          recherche: Caractere de recherche associe au test. 
+      num_test: Numero du test. 
+      nb_test: Nombre total de tests. 
+                        </pre>
+                        
+                    </article>          
+                        <article>
+                        <h3>structure_etu : Structure d'un etudiant</h3>
+                        <pre>
+
+          prenom: Prenom de l'etudiant. 
+      nom: Nom de l'etudiant. 
+      grp_td: Numero du groupe de travaux diriges (TD). 
+      grp_tp: Numero du groupe de travaux pratiques (TP). 
+                        </pre>
+                        
+                    </article>          
+                    </div>
+            </article>
+            <article>
+                <h2>GLOBAL</h2>
+                        <p> test1 = 65 :  valeurs de test 1(sequentielle) </p>
+                                        <p> test2 = 43 :  valeur de test 2(dichotomique) </p>
+                                        <p> test3 = "test3":  pour test </p>
+                                        <p> test4 = 3.14:  Pi </p>
+                                        <p> i = 0:  indice permettant de parcourir le tableau </p>
+                                        <p> id=-1:  indice de la valeur si trouve </p>
+                                        <p> id = -1 :  indice de la valeur si trouve </p>
+                                        <p> min = 0 :  indice du min de la liste </p>
+                                        <p> max = N-1 :  indice du max de la liste </p>
+                                </article>
+            <article>
+                <h2>FONCTION ET PROCEDURE</h2>
+                    <div>
+                        <article>
+                        <h3>main()</h3>
+                        <p>verifie que les fonctions de recherche fonctionnent,</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li>AUCUN</li>
+                                                    </ul>
+                        <p>
+                        Retourne   EXIT_SUCCESS                        </p>
+                    </article>
+                        <article>
+                        <h3>recherche_sequentielle ( valeur,  tabEntiers tablo )</h3>
+                        <p>Recherche sequentielle dans un tableau d'entiers.</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li> valeur La valeur a rechercher dans le tableau. </li>
+                                
+                                <li> tablo Le tableau d'entiers dans lequel effectuer la recherche. </li>
+                                                    </ul>
+                        <p>
+                        Retourne    L'indice de la premiere occurrence de la valeur dans le tableau, ou -1 si la valeur n'est pas presente.                        </p>
+                    </article>
+                        <article>
+                        <h3>recherche_dicho_iteratif( valeur,  tabEntiers tablo)</h3>
+                        <p>Recherche iterative par dichotomie dans un tableau d'entiers.</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li> valeur La valeur a rechercher dans le tableau. </li>
+                                
+                                <li> tablo Le tableau d'entiers trie dans lequel effectuer la recherche. </li>
+                                                    </ul>
+                        <p>
+                        Retourne    L'indice de la premiere occurrence de la valeur dans le tableau, ou -1 si la valeur n'est pas presente.                        </p>
+                    </article>
+                    </div>
+            </article>
+        </main>
+    </body>
+        <body>
+        <header>
+            <h1 class="test" >src2.c</h1>
+                    <p>   programme permettant de faire des calcul simple entre 2 nombres </p>
+        </header>
+        <main>
+            <article>
+                <h2>DEFINE</h2>
+                        <p>MAX 10   Nombre Max</p>
+                    <p>MIN 0  Nombre Min</p>
+                </article>
+            <article>
+                <h2>STRUCTURE</h2>
+                <div>
+                        <article>
+                        <h3>PoInt:  Structure d'un poInt</h3>
+                        <pre>
+
+          x:  Coordonnee x du poInt 
+      y:  Coordonnee y du poInt 
+                        </pre>
+                        
+                    </article>          
+                        <article>
+                        <h3>Person:  Structure d'une Person</h3>
+                        <pre>
+
+          nom[50]:  Nom de la personne 
+      age:      Age de la personne 
+                        </pre>
+                        
+                    </article>          
+                    </div>
+            </article>
+            <article>
+                <h2>GLOBAL</h2>
+                        <p> testadd = 4: 1 chiffre pour tester les addition </p>
+                                        <p> test1add = 5: 1 deuxieme chiffre pour tester les addition </p>
+                                        <p> total=Addition(testadd,test1add): </p>
+                                        <p> total = p1 + p2 : </p>
+                                </article>
+            <article>
+                <h2>FONCTION ET PROCEDURE</h2>
+                    <div>
+                        <article>
+                        <h3>main()</h3>
+                        <p>Fonction principale du programme, fait une addition .</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li>AUCUN</li>
+                                                    </ul>
+                        <p>
+                        Retourne    EXIT_SUCCESS si le programme s'est execute avec succes.                        </p>
+                    </article>
+                        <article>
+                        <h3>Addition( p1,  p2)</h3>
+                        <p>Fonction pour calculer p1 plus p2.</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li> p1 Le premier entier. </li>
+                                
+                                <li> p2 Le deuxieme entier. </li>
+                                                    </ul>
+                        <p>
+                        Retourne    p1 + p2.                        </p>
+                    </article>
+                        <article>
+                        <h3>soustraction( p1,  p2)</h3>
+                        <p>Fonction pour calculer p1 moins p2.</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li> p1 Le premier entier. </li>
+                                
+                                <li> p2 Le deuxieme entier. </li>
+                                                    </ul>
+                        <p>
+                        Retourne    p1 - p2.                        </p>
+                    </article>
+                    </div>
+            </article>
+        </main>
+    </body>
+        <body>
+        <header>
+            <h1 class="test" >src3.c</h1>
+                    <p>   Ce programme simule un systeme de gestion de bibliotheque. Chaque livre est caracterise par un identifiant,  un titre, un auteur et une annee de publication. Chaque membre de la bibliotheque est defini par un identifiant,  un nom et la liste des livres qu'il a empruntes.  Les principales fonctionnalites du programme incluent l'affichage des details des livres et des membres, l'ajout  de nouveaux livres et membres, le calcul de la somme des annees de publication des livres empruntes par un membre,  et la recherche du livre le plus recent dans la bibliotheque. Le programme utilise des boucles pour iterer a travers  les structures de donnees, assurant ainsi une gestion efficace de la bibliotheque. Les fonctions modulaires rendent le  code extensible, permettant d'ajouter facilement de nouvelles fonctionnalites. </p>
+        </header>
+        <main>
+            <article>
+                <h2>DEFINE</h2>
+                        <p>MAX_LIVRE 100  Nombre de livre MAX dans la bibliotheque</p>
+                    <p>MAX_MEMBRE 100  Nombre de membre MAX dans la bibliotheque</p>
+                    <p>TAILLE_MAX_TITRE 100  Longueur maximum d'un titre</p>
+                    <p>TAILLE_MAX_AUTEUR 30  Longueur maximum du nom d'un auteur</p>
+                </article>
+            <article>
+                <h2>STRUCTURE</h2>
+                <div>
+                    </div>
+            </article>
+            <article>
+                <h2>GLOBAL</h2>
+                        <p> sommeAnnees = 0: </p>
+                                        <p> livreID = m.livreEmprunte[i]: </p>
+                                        <p> nbLivre = 0: </p>
+                                        <p> compteur = 0: </p>
+                                </article>
+            <article>
+                <h2>FONCTION ET PROCEDURE</h2>
+                    <div>
+                        <article>
+                        <h3>void afficheLivre(struct livre b)</h3>
+                        <p>Fonction pour afficher les details d'un livre</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li> struct livre b Structure du livre </li>
+                                                    </ul>
+                        <p>
+                                                </p>
+                    </article>
+                        <article>
+                        <h3>void afficheMembre(struct membreBib m, struct livre l)</h3>
+                        <p>Fonction pour afficher les details d'un membre de la bibliotheque</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li> struct membreBib m Structure des membre de la bibliotheque </li>
+                                
+                                <li> struct livre l Structure des livres/ </li>
+                                                    </ul>
+                        <p>
+                                                </p>
+                    </article>
+                        <article>
+                        <h3>sommeAnneesLivresEmpruntes(struct membreBib m)</h3>
+                        <p>/  Fonction pour calculer la somme des annees de publication des livres empruntes par un membre</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li> struct membreBib m Structure des membre de la bibliotheque </li>
+                                                    </ul>
+                        <p>
+                        Retourne    sommeAnnee Retourne la somme des annee des livre emprunte                        </p>
+                    </article>
+                        <article>
+                        <h3>struct livre livrePlusRecent()</h3>
+                        <p>Fonction permettant de savoir le livre le plus recent</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li>AUCUN</li>
+                                                    </ul>
+                        <p>
+                        Retourne    plusRecent Retourne la structure du livre le plus recent                        </p>
+                    </article>
+                        <article>
+                        <h3>void ajouterLivre(struct livre *bibliotheque,  id,  *nom,  *auteur,  annee)</h3>
+                        <p>Fonction pour rajouter un livre dans la bibliotheque</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li> struct livre bibliotheque Structure comportant tout les livres </li>
+                                
+                                <li> int id ID du livre a inserer dans la bibliotheque </li>
+                                
+                                <li> char nom Titre du livre a inserer dans la bibliotheque </li>
+                                
+                                <li> char auteur Auteur du livre a inserer dans la bibliotheque </li>
+                                
+                                <li> int annee Annee de parution du livre a inserer dans la bibliotheque </li>
+                                                    </ul>
+                        <p>
+                                                </p>
+                    </article>
+                        <article>
+                        <h3>void ajouteMembre(struct membreBib nouveauMembre)</h3>
+                        <p>Fonction pour rajouter un membre dans la bibliotheque</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li> struct membreBib nouveauMembre Structure pour ajouter le nouveau membre </li>
+                                                    </ul>
+                        <p>
+                                                </p>
+                    </article>
+                        <article>
+                        <h3>compteLivres()</h3>
+                        <p>Fonction pour compter le nombre de livres dans la bibliotheque</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li>AUCUN</li>
+                                                    </ul>
+                        <p>
+                        Retourne    nbLivre Nombre de livre contenu dans la bibliotheque                        </p>
+                    </article>
+                        <article>
+                        <h3>compteMembres()</h3>
+                        <p>Fonction pour compter le nombre de membres dans la bibliotheque</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li>AUCUN</li>
+                                                    </ul>
+                        <p>
+                        Retourne    compteur Retourne le nombre de membre inscrit dans la bibliotheque                        </p>
+                    </article>
+                        <article>
+                        <h3>main()</h3>
+                        <p>Fonction principale du programme pour gerer la bibliotheque</p>
+                        <h4>Parametres</h4>
+                        <ul>
+                                
+                                <li>AUCUN</li>
+                                                    </ul>
+                        <p>
+                        Retourne    EXIT_SUCCESS                        </p>
+                    </article>
+                    </div>
+            </article>
+        </main>
+    </body>
+    </html>

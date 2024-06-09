@@ -1,0 +1,8 @@
+#!/bin/bash
+echo '' > fic_c
+for fic in src/*.c
+do
+    echo $fic >> fic_c
+done
+
+

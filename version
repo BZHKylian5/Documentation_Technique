@@ -1,0 +1,53 @@
+#!/usr/bin/bash
+##-------------------------------------------------------
+##                  gestion des versions 
+##-------------------------------------------------------
+# Nom du fichier contenant la version
+fichier_version="version.txt"
+
+# Fonction pour incrémenter la version
+increment_version() {
+    local major
+    local minor
+    local build
+
+    IFS='.' read -r major minor build<<< "$version"
+
+    if [ "$1" == "major" ]; then
+        major=$((major + 1))
+        minor=0
+        build=0
+    elif [ "$1" == "minor" ]; then
+        minor=$((minor + 1))
+    elif [ "$1" == "build" ]; then
+        build=$((build + 1))
+    else
+        echo "Usage: $0 [major|minor|build]"
+        exit 1
+    fi
+
+    version="$major.$minor.$build"
+}
+
+# Vérification du nombre d'arguments
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 [major|minor|build]"
+    exit 1
+fi
+
+# Lecture de la version actuelle depuis le fichier
+if [ -e "$fichier_version" ]; then
+    version=$(cat "$fichier_version")
+else
+    # Si le fichier n'existe pas, utilisez une version par défaut
+    version="1.0.0"
+fi
+
+# Incrémentation de la version en fonction du paramètre fourni
+increment_version "$1"
+
+# Enregistrement de la nouvelle version dans le fichier
+echo "$version" > "$fichier_version"
+
+# Affichage de la nouvelle version
+echo "Nouvelle version : $version"
